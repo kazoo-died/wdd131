@@ -1,9 +1,4 @@
 
-
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap');
-
-/*Global Styles*/
 * {
   margin: 0;
   padding: 0;
@@ -31,7 +26,7 @@ header span#course-title {
   font-weight: bold;
 }
 
-/*Navigation*/
+
 nav ul {
   display: flex;
   justify-content: center;
@@ -54,7 +49,6 @@ nav a:hover {
   color: #2c3e50;
 }
 
-/*Main Layout*/
 main {
   max-width: 1000px;
   margin: 2rem auto;
@@ -87,7 +81,6 @@ main h1 {
   margin-bottom: 1rem;
 }
 
-/*Image styling*/
 .card img {
   max-width: 100%;
   border-radius: 6px;
@@ -98,7 +91,7 @@ main h1 {
   margin: 0.5rem 0;
 }
 
-/*Footer*/
+
 footer {
   background-color: #2c3e50;
   color: white;
