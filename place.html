@@ -1,0 +1,60 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Japan</title>
+  <link rel="stylesheet" href="styles/place.css">
+  <script src="scripts/place.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Japan</h1>
+  </header>
+
+  <main>
+ 
+    <picture>
+      <source srcset="images/fuji.webp" media="(min-width: 1000px)">
+      <source srcset="images/fuji.webp" media="(min-width: 600px)">
+      <img src="images/fuji.webp" alt="Japan scenery">
+    </picture>
+
+    <section class="data">
+      <h2>Data</h2>
+      <ul>
+        <li>Area: 377,975 km²</li>
+        <li>Population: 125.4 million</li>
+        <li>Language: Japanese</li>
+        <li>Currency: Yen (JPY)</li>
+        <li>Time Zone: JST (UTC+9)</li>
+        <li>Calling Code: +81</li>
+        <li>Internet TLD: .jp</li>
+      </ul>
+    </section>
+
+
+    <section class="weather">
+      <h2>Weather</h2>
+      <div class="icon">
+        <img src="images/sunny_icon.svg" alt="Sunny icon">
+      </div>
+      <ul>
+        <li>Temperature: <span id="temp">8</span> °C</li>
+        <li>Conditions: Sunny</li>
+        <li>Wind: <span id="wind">10</span> km/h</li>
+        <li>Wind Chill: <span id="windchill"></span></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Daniel Rivard | USA</p>
+    <p>Last Modification: <span id="lastModified"></span></p>
+  </footer>
+</body>
+</html>

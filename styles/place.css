@@ -1,0 +1,76 @@
+
+
+
+
+:root {
+  --primary: #bc002d;   
+  --secondary: #ffffff; 
+  --accent: #000000;    
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--accent);         
+  background-color: var(--secondary); 
+}
+
+
+header {
+  background: var(--primary);  
+  color: var(--secondary);      
+  text-align: center;
+  padding: 1rem;
+}
+
+
+main {
+  max-width: 800px;
+  margin: auto;
+  padding: 1rem;
+}
+
+picture img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+section {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.weather h2::after {
+  content: " ⛅"; 
+}
+
+footer {
+  background: var(--primary);  
+  color: var(--secondary);      
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+
+@media (min-width: 700px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  picture {
+    grid-column: 1 / -1;
+  }
+}
