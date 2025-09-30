@@ -1,0 +1,71 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
+header {
+  background: #4B0082;
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#hamburger {
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+}
+
+nav {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+}
+
+nav.open {
+  display: flex;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #FFD700;
+}
+
+main {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+.temples-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.temple-card {
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 8px;
+  background: #f9f9f9;
+}
+
+.temple-card img {
+  width: 100%;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+footer {
+  background: #4B0082;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
