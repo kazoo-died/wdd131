@@ -1,0 +1,150 @@
+/* Base */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f1faf9;
+  color: #063540;
+  margin: 0;
+  padding: 0;
+}
+
+/* Form container */
+.form-container {
+  max-width: 450px;
+  margin: 40px auto;
+  background: #e3f2f1;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+  text-align: center;
+  background-color: #008b8b;
+  color: #ffffff;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+/* Labels & Inputs */
+label, legend {
+  display: block;
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border-radius: 8px;
+  border: 1px solid #bbb;
+  font-size: 1rem;
+}
+
+fieldset {
+  border: none;
+  margin: 15px 0;
+}
+
+/* Stars */
+.stars {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.stars input {
+  display: none;
+}
+
+.stars label {
+  font-size: 2rem;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.stars label:hover,
+.stars label:hover ~ label {
+  color: #ff7f50;
+}
+
+.stars input:checked ~ label {
+  color: #ff7f50;
+}
+
+/* Submit button */
+.submit-btn {
+  background-color: #ff7f50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  margin-top: 20px;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.submit-btn:hover {
+  background-color: #ff6333;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 0.85rem;
+  color: white;
+  background-color: #008b8b;
+  padding: 12px;
+  margin-top: 30px;
+  border-top: 3px solid #ff7f50;
+}
+
+/* Responsive adjustments */
+@media (min-width: 700px) {
+  .form-container {
+    max-width: 700px;
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  form label, form fieldset, form textarea, form input[type="submit"] {
+    grid-column: span 2;
+  }
+
+  fieldset legend {
+    margin-bottom: 8px;
+  }
+}
+
+fieldset label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+  font-weight: normal;
+}
+
+fieldset input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #008b8b;
+}
+
+
+@media (max-width: 600px) {
+  .form-container {
+    margin: 15px;
+    padding: 18px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}

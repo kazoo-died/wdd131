@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Review</title>
+  <link rel="stylesheet" href="styles/style.css" />
+  <script defer src="scripts/script.js"></script>
+</head>
+<body>
+  <main class="form-container">
+    <h1>Product Review</h1>
+
+    <form action="review.html" method="get" id="reviewForm">
+     
+      <label for="productName">Product Name</label>
+      <select id="productName" name="productName" required>
+        <option value="" disabled selected>Select a Product ...</option>
+      </select>
+
+     
+      <fieldset>
+        <legend>Overall Rating</legend>
+        <div class="stars">
+          <input type="radio" id="star5" name="rating" value="5" required />
+          <label for="star5" title="5 stars">★</label>
+
+          <input type="radio" id="star4" name="rating" value="4" />
+          <label for="star4" title="4 stars">★</label>
+
+          <input type="radio" id="star3" name="rating" value="3" />
+          <label for="star3" title="3 stars">★</label>
+
+          <input type="radio" id="star2" name="rating" value="2" />
+          <label for="star2" title="2 stars">★</label>
+
+          <input type="radio" id="star1" name="rating" value="1" />
+          <label for="star1" title="1 star">★</label>
+        </div>
+      </fieldset>
+
+    
+      <label for="installDate">Date of Installation</label>
+      <input type="date" id="installDate" name="installDate" required />
+
+      
+      <fieldset>
+        <legend>Which features did you find useful?</legend>
+        <label><input type="checkbox" name="features" value="Battery Life" /> Battery Life</label>
+        <label><input type="checkbox" name="features" value="Sound Quality" /> Sound Quality</label>
+        <label><input type="checkbox" name="features" value="Display" /> Display</label>
+        <label><input type="checkbox" name="features" value="Portability" /> Portability</label>
+      </fieldset>
+
+      
+      <label for="writtenReview">Written Review (Optional)</label>
+      <textarea id="writtenReview" name="writtenReview" rows="4"></textarea>
+
+      
+      <label for="userName">Your Name (Optional)</label>
+      <input type="text" id="userName" name="userName" />
+
+      
+      <input type="submit" value="Post Review" class="submit-btn" />
+    </form>
+  </main>
+
+  <footer>
+    <p>©2025 Daniel Rivard  |  USA</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
+
