@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Recipe Haven — Favorites</title>
+  <link rel="stylesheet" href="styles/style.css" />
+  <meta name="description" content="Saved favorites on Recipe Haven." />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="logo" href="index.html">Recipe Haven</a>
+      <nav class="main-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="recipes.html">Recipes</a></li>
+          <li><a href="submit.html">Submit</a></li>
+          <li><a href="favorites.html" aria-current="page">Favorites</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h1>Favorites</h1>
+    <div id="favorites-grid" class="grid" aria-live="polite">
+      <!-- favorites rendered here -->
+    </div>
+    <p id="no-favorites" class="muted" hidden>You have no favorites yet.</p>
+  </main>
+
+  <footer class="site-footer wrap">
+    <p>&copy; <span id="year4"></span> Recipe Haven</p>
+  </footer>
+
+  <script src="scripts/storage.js"></script>
+  <script src="scripts/recipes.js"></script>
+  <script src="scripts/main.js"></script>
+  <script>document.getElementById('year4').textContent = new Date().getFullYear();</script>
+</body>
+</html>

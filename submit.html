@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Recipe Haven — Submit</title>
+  <link rel="stylesheet" href="styles/style.css" />
+  <meta name="description" content="Submit a recipe to Recipe Haven." />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="logo" href="index.html">Recipe Haven</a>
+      <nav class="main-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="recipes.html">Recipes</a></li>
+          <li><a href="submit.html" aria-current="page">Submit</a></li>
+          <li><a href="favorites.html">Favorites</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section aria-labelledby="submit-heading">
+      <h1 id="submit-heading">Submit a Recipe</h1>
+      <form id="recipe-form" novalidate>
+        <div class="form-row">
+          <label for="title">Title</label>
+          <input id="title" name="title" type="text" required minlength="2" />
+        </div>
+
+        <div class="form-row">
+          <label for="category-field">Category</label>
+          <select id="category-field" name="category" required>
+            <option value="">Choose a category</option>
+            <option value="breakfast">Breakfast</option>
+            <option value="lunch">Lunch</option>
+            <option value="dinner">Dinner</option>
+            <option value="dessert">Dessert</option>
+            <option value="snack">Snack</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label for="description">Short description</label>
+          <textarea id="description" name="description" rows="4" required></textarea>
+        </div>
+
+        <div class="form-row">
+          <label for="prep-time">Prep time (minutes)</label>
+          <input id="prep-time" name="prepTime" type="number" min="0" step="1" />
+        </div>
+
+        <div class="form-row form-actions">
+          <button type="submit" class="btn">Submit Recipe</button>
+          <button type="button" id="reset-btn" class="btn ghost">Reset</button>
+        </div>
+
+        <p id="form-message" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer wrap">
+    <p>&copy; <span id="year3"></span> Recipe Haven</p>
+  </footer>
+
+  <script src="scripts/storage.js"></script>
+  <script src="scripts/recipes.js"></script>
+  <script src="scripts/main.js"></script>
+  <script>document.getElementById('year3').textContent = new Date().getFullYear();</script>
+</body>
+</html>

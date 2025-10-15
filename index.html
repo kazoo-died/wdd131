@@ -1,47 +1,50 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="styles/base.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="This is a landing page for WDD 131 – Dynamic Web Fundamentals by Daniel Rivard.">
-    <meta name="author" content="Daniel Rivard">    
-    <title>WDD 131 – Dynamic Web Fundamentals – Daniel Rivard</title>
-    <script src="scripts/getdates.js" defer></script>
-
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Recipe Haven — Home</title>
+  <link rel="stylesheet" href="styles/style.css" />
+  <meta name="description" content="Recipe Haven — discover and save simple recipes." />
 </head>
 <body>
-  <header>
-    <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
-    <nav>
-      <ul>
-        <li><a href="https://www.linkedin.com/" target="_blank">LinkedIn</a></li>
-        <li><a href="https://byupw.instructure.com/" target="_blank">Canvas</a></li>
-        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7" target="_blank">Favorite Scripture</a></li>
-        <li><a href="#">Final Project</a></li>
-      </ul>
-    </nav>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="logo" href="index.html">Recipe Haven</a>
+      <button id="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+      <nav id="main-nav" class="main-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="recipes.html">Recipes</a></li>
+          <li><a href="submit.html">Submit</a></li>
+          <li><a href="favorites.html">Favorites</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <h1>Daniel Rivard</h1>
-    <section class="card">
-      <h2>About me</h2>
-      <img src="images/daniel.webp" alt="Profile pic 1">
-      <p>My name is Daniel Rivard. I am a BYU student through the Pathway program. I live in Virgina and have three cats. I spend the majority of my time trying to understand what I'm learning, but I also enjoy playing games with my friends and practicing drawing. </p>
+  <main class="wrap">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-text">
+        <h1 id="hero-title">Welcome to Recipe Haven</h1>
+        <p>Start with an empty cookbook — add your first recipe using the Submit page.</p>
+        <p><a class="btn" href="submit.html">Add a Recipe</a> <a class="btn ghost" href="recipes.html">View Recipes</a></p>
+      </div>
     </section>
 
-    <section class="card">
-      <h2>The United States of America</h2>
-      <img src="images/flag.webp" alt="Flag 2">
-      <p>The United States of America, commonly known as the USA, is a vast and diverse country located primarily in North America. It is made up of 50 states, a federal district, and several territories, stretching from the Atlantic Ocean in the east to the Pacific Ocean in the west. Known as a global leader in politics, technology, culture, and economics, the USA has a strong influence on world affairs. Its population is a blend of many ethnicities and cultures, making it one of the most diverse nations on Earth. The country is built on democratic principles, valuing freedom, equality, and opportunity, which are central to its identity. With iconic landmarks such as the Statue of Liberty, the Grand Canyon, and the White House, the USA is not only a political and economic powerhouse but also a hub for tourism and innovation. Its history, shaped by both struggles and achievements, continues to play a key role in defining the nation’s character and its role on the global stage.</p>
+    <section aria-labelledby="how-heading" class="intro">
+      <h2 id="how-heading">How it works</h2>
+      <p>Add recipes on the Submit page — they will save in your browser and show up in Recipes. Mark favorites to keep quick access on the Favorites page.</p>
     </section>
-    </main>
+  </main>
 
-  <footer>
-    <p>&copy; <span id="currentyear"></span> Daniel Rivard | United States of America</p>
-    <p id="lastModified"></p>
+  <footer class="site-footer wrap">
+    <p>&copy; <span id="year"></span> Recipe Haven</p>
   </footer>
+
+  <script src="scripts/storage.js"></script>
+  <script src="scripts/recipes.js"></script>
+  <script src="scripts/main.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>

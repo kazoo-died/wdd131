@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Recipe Haven — Recipes</title>
+  <link rel="stylesheet" href="styles/style.css" />
+  <meta name="description" content="Browse recipes on Recipe Haven." />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="logo" href="index.html">Recipe Haven</a>
+      <button id="nav-toggle-2" aria-controls="main-nav-2" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+      <nav id="main-nav-2" class="main-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="recipes.html" aria-current="page">Recipes</a></li>
+          <li><a href="submit.html">Submit</a></li>
+          <li><a href="favorites.html">Favorites</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="controls" aria-label="Search and filters">
+      <label for="search">Search</label>
+      <input id="search" type="search" placeholder="Search titles or descriptions" />
+
+      <label for="category">Category</label>
+      <select id="category">
+        <option value="all">All</option>
+        <option value="breakfast">Breakfast</option>
+        <option value="lunch">Lunch</option>
+        <option value="dinner">Dinner</option>
+        <option value="dessert">Dessert</option>
+        <option value="snack">Snack</option>
+      </select>
+
+      <button id="clear-filters" class="btn ghost">Clear</button>
+    </section>
+
+    <section aria-labelledby="recipes-heading" class="recipes-list">
+      <h2 id="recipes-heading">Recipes</h2>
+      <div id="recipes-grid" class="grid" aria-live="polite">
+        <!-- Empty initially; recipes.js will render cards -->
+      </div>
+      <p id="no-results" class="muted" hidden>No recipes yet — add one on the Submit page.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer wrap">
+    <p>&copy; <span id="year2"></span> Recipe Haven</p>
+  </footer>
+
+  <script src="scripts/storage.js"></script>
+  <script src="scripts/recipes.js"></script>
+  <script src="scripts/main.js"></script>
+  <script>document.getElementById('year2').textContent = new Date().getFullYear();</script>
+</body>
+</html>
